@@ -92,7 +92,7 @@ def myargs():
     parser.add_argument('--molecule', required = True, help = 
                         'location of the protein/ligand mol2 file path')
     parser.add_argument('--output', required = False, help = 'location for the model to be saved')
-    parser.add_argument('--dpi', required = False, help = 'location for the model to be saved')
+    parser.add_argument('--dpi', required = False, help = 'image quality in dpi, eg: 300')
     args = parser.parse_args()
     return args
 
