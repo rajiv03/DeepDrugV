@@ -21,3 +21,9 @@ create a 2D image using mol2 file
 
     python deepdrugV.py --molecule input.mol2 --output output.jpg --dpi integer 
     
+    
+2D image created from this line
+    python deepdrugV.py --molecule 3nbf.mol2 --output voronoi_2D.jpg --dpi 300 
+
+#![eg_image](https://github.com/rajiv03/DeepDrugV/blob/master/voronoi_2D.jpg) 
+
