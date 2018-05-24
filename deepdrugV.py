@@ -5,7 +5,6 @@ import matplotlib
 import sys,os,argparse
 from biopandas.mol2 import PandasMol2
 import matplotlib.pyplot as plt
-from shapely.geometry import Polygon
 
 def voronoi_polygons_2D(vor, radius=None):
     if vor.points.shape[1] != 2:
