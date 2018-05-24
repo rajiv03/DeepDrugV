@@ -1,7 +1,7 @@
-# DeepDrugV
+## DeepDrugV
 DeepDrugV constructs the voronoi diagram (VD) of protein binding site/pocket or ligand structure based on the 3D  or 2D coordinate structure.
 
-# Requirements
+## Requirements
 1. Python 2.7+
 2. numpy 1.14+
 3. scipy 0.18+
@@ -10,5 +10,8 @@ DeepDrugV constructs the voronoi diagram (VD) of protein binding site/pocket or 
 6. matplotlib 2.0.2+
 7. biopandas ; eg : pip/conda install biopandas  
 
+## Getting started
 
+1. Clone the code from GitHub
+2. Run `deepdrugV` with a .mol2 file (see Examples)
 
