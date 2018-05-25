@@ -23,8 +23,8 @@ create a 2D image using mol2 file in 2D or 3D format
     python deepdrugV.py -mol input.mol2 -out output.jpg -dpi integer 
     
     -mol stands for the receptor, protein or ligand (MUST BE in a mol2 format)
-    -out is the name of the output file (default is png format. Need to add a .jpg extension)
-    -dpi is the desired image quality (eg: 120 dpi in 2.7 x 2.7 = 256 x 256 px)
+    -out is the name of the output file [OPTION](default is png format. Need to add a .jpg extension)
+    -dpi is the desired image quality [OPTION](default 120 dpi in 2.7 x 2.7 = 256 x 256 px)
 
 creating a 2D image of voronoi using protein pocket file in mol2 3D format
 
