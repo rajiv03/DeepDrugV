@@ -1,5 +1,5 @@
 ## DeepDrugV
-DeepDrugV constructs the voronoi diagram (VD) of protein binding site/pocket or ligand structure based on the 3D  or 2D coordinate structure. 3D coordinate will be projected into 2D plane by perspective projection; Px= x/1-z, Py= y/1-z
+DeepDrugV constructs the voronoi diagram (VD) of protein binding site/pocket or ligand structure based on the 3D or 2D coordinate structure. 
                                                          
 ## Requirements
 1. Python 2.7+
@@ -13,7 +13,8 @@ DeepDrugV constructs the voronoi diagram (VD) of protein binding site/pocket or 
 ## Getting started
 
 1. copy/download the code from GitHub
-2. Run deepdrugV.py with a .mol2 file (see Examples)
+2. If input is a 3D coordinate of protein/ligand, it will be projected to 2D plane employing perspective projection: Px= x/1-z, Py= y/1-z
+3. Run deepdrugV.py with a .mol2 file (see Examples)
 
 ## Examples
 
