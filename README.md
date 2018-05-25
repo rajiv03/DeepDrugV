@@ -36,6 +36,6 @@ Voronoi image of ATP-binding site protein pocket colored by atom types:
 
 chaperonin (4v94, chain E)
 
-If you find this tool useful, please cite this paper:
+Contributors:
 
 Rajiv Gandhi Govindaraj, Jeffrey Lemoine, Limeng Pu, and Michal Brylinski. "DeepDrugV"
