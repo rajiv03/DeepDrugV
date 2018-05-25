@@ -88,7 +88,7 @@ def voronoi_atoms(bs,bs_out,size):
     return None
 
 def myargs():
-    parser = argparse.ArgumentParser()                                              
+    parser = argparse.ArgumentParser('python')                                              
     parser.add_argument('-mol', required = True, help = 
                         'location of the protein/ligand mol2 file path')
     parser.add_argument('-out', required = False, help = 'location for the image to be saved')
