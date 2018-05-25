@@ -89,10 +89,10 @@ def voronoi_atoms(bs,bs_out,size):
 
 def myargs():
     parser = argparse.ArgumentParser()                                              
-    parser.add_argument('--molecule', required = True, help = 
+    parser.add_argument('-mol', required = True, help = 
                         'location of the protein/ligand mol2 file path')
-    parser.add_argument('--output', required = False, help = 'location for the model to be saved')
-    parser.add_argument('--dpi', required = False, help = 'image quality in dpi, eg: 300')
+    parser.add_argument('-out', required = False, help = 'location for the model to be saved')
+    parser.add_argument('-dpi', required = False, help = 'image quality in dpi, eg: 300')
     args = parser.parse_args()
     return args
 
