@@ -98,4 +98,4 @@ def myargs():
 
 if __name__ == "__main__":
     args = myargs()
-    voronoi_atoms(args.molecule,args.output,args.dpi)
+    voronoi_atoms(args.mol,args.out,args.dpi)
