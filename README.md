@@ -26,7 +26,7 @@ create a 2D image using protein pocket file in mol2 format
 
     python deepdrugV.py --molecule 3nbf.mol2 --output voronoi_2D.jpg --dpi 300   
     
-## Voronoi image of ATP-binding site protein pocket
+Voronoi image of ATP-binding site protein pocket
  
 ![eg_image](https://github.com/rajiv03/DeepDrugV/blob/master/voronoi_2D.jpg) 
 
