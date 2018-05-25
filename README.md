@@ -17,12 +17,12 @@ DeepDrugV constructs the voronoi diagram (VD) of protein binding site/pocket or 
 
 ## Examples
 
-create a 2D image using mol2 file
+create a 2D image using mol2 file in 2D or 3D format
 
     python deepdrugV.py --molecule input.mol2 --output output.jpg --dpi integer 
     
 
-create a 2D image using protein pocket file in mol2 format
+creating a 2D image of voronoi using protein pocket file in mol2 3D format
 
     python deepdrugV.py --molecule 3nbf.mol2 --output voronoi_2D.jpg --dpi 300   
     
