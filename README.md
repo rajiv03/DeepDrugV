@@ -32,3 +32,7 @@ Voronoi image of ATP-binding site protein pocket colored by atom types:
 ![eg_image](https://github.com/rajiv03/DeepDrugV/blob/master/voronoi_2D.jpg) 
 
 Heat resistant RNA dependent ATPase (3nbf)
+
+If you find this tool useful, please cite this paper:
+
+Rajiv Gandhi Govindaraj, Jeffrey Lemoine, Limeng Pu, and Michal Brylinski. "DeepDrugV"
