@@ -62,7 +62,7 @@ def voronoi_atoms(bs,bs_out,size):
     XY = pt.x/1-pt.z,pt.y/1-pt.z 
     pt.loc[:,'X'] = XY[0] ; pt.loc[:,'Y'] = XY[1] 
     # setting output image size, labels off
-    figure = plt.figure(figsize=(3.31 , 3.31),dpi=int(size))
+    figure = plt.figure(figsize=(3.3 , 3.3),dpi=int(size))
     ax = plt.subplot(111); ax.axis('off'); ax.tick_params(axis='both', left='off', top='off', right='off', bottom='off', labelleft='off', labeltop='off',
                     labelright='off', labelbottom='off')
     # compute Voronoi tesselation
@@ -82,7 +82,7 @@ def voronoi_atoms(bs,bs_out,size):
         p1 = matplotlib.patches.Polygon(tmp3, facecolor=col1, edgecolor='black', alpha=0.5)
         ax.add_patch(p1)
     ax.set_xlim(vor.min_bound[0] - 0.1, vor.max_bound[0] + 0.1)
-    ax.set_ylim(vor.min_bound[1] - 0.1, vor.max_bound[0] + 0.1)
+    ax.set_ylim(vor.min_bound[1] - 0.1, vor.max_bound[1] + 0.1)
     # output image saving in any format; default jpg
     plt.savefig(bs_out, frameon=False,bbox_inches="tight", pad_inches=False)
     return None
