@@ -53,7 +53,7 @@ def voronoi_polygons_2D(vor, radius=None):
         new_regions.append(new_region.tolist())
     return new_regions, np.asarray(new_vertices)
 
-def voronoi_atoms(bs,bs_out,size):
+def voronoi_atoms(bs,bs_out=None,size=None):
     pd.options.mode.chained_assignment = None
     # read molecules in mol2 format 
     protein = PandasMol2().read_mol2(bs)
@@ -61,7 +61,8 @@ def voronoi_atoms(bs,bs_out,size):
     # convert 3D to 2D based on Perspective projection (x/1-z, y/1-z)
     XY = pt.x/1-pt.z,pt.y/1-pt.z 
     pt.loc[:,'X'] = XY[0] ; pt.loc[:,'Y'] = XY[1] 
-    # setting output image size, labels off
+    # setting output image size, labels off, set 120 dpi w x h
+    size = 120 if size is None else size
     figure = plt.figure(figsize=(2.69 , 2.70),dpi=int(size))
     ax = plt.subplot(111); ax.axis('off'); ax.tick_params(axis='both', left='off', top='off', right='off', bottom='off', labelleft='off', labeltop='off',
                     labelright='off', labelbottom='off')
@@ -84,6 +85,7 @@ def voronoi_atoms(bs,bs_out,size):
     ax.set_xlim(vor.min_bound[0] - 0.1, vor.max_bound[0] + 0.1)
     ax.set_ylim(vor.min_bound[1] - 0.1, vor.max_bound[1] + 0.1)
     # output image saving in any format; default jpg
+    bs_out = 'out.jpg' if bs_out is None else bs_out
     plt.savefig(bs_out, frameon=False,bbox_inches="tight", pad_inches=False)
     return None
 
