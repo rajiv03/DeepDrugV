@@ -62,7 +62,7 @@ def voronoi_atoms(bs,bs_out,size):
     XY = pt.x/1-pt.z,pt.y/1-pt.z 
     pt.loc[:,'X'] = XY[0] ; pt.loc[:,'Y'] = XY[1] 
     # setting output image size, labels off
-    figure = plt.figure(figsize=(3.3 , 3.3),dpi=int(size))
+    figure = plt.figure(figsize=(2.69 , 2.70),dpi=int(size))
     ax = plt.subplot(111); ax.axis('off'); ax.tick_params(axis='both', left='off', top='off', right='off', bottom='off', labelleft='off', labeltop='off',
                     labelright='off', labelbottom='off')
     # compute Voronoi tesselation
