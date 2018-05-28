@@ -32,7 +32,7 @@ creating a 2D image of voronoi using protein pocket file in mol2 3D format
     
 Voronoi image of ATP-binding site protein pocket colored by atom types:
  
-![eg_image](https://github.com/rajiv03/DeepDrugV/blob/master/Voronoi_2D_4v94E.jpg) 
+![eg_image](https://github.com/rajiv03/DeepDrugV/blob/master/Voronoi_2D_4v94E.jp) 
 
 chaperonin (4v94, chain E)
 
