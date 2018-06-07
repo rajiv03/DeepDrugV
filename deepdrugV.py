@@ -64,8 +64,7 @@ def voronoi_atoms(bs,bs_out=None,size=None):
     # setting output image size, labels off, set 120 dpi w x h
     size = 120 if size is None else size
     figure = plt.figure(figsize=(2.69 , 2.70),dpi=int(size))
-    ax = plt.subplot(111); ax.axis('off'); ax.tick_params(axis='both', left='off', top='off', right='off', bottom='off', labelleft='off', labeltop='off',
-                    labelright='off', labelbottom='off')
+    ax = plt.subplot(111); ax.set_axis_off()
     # compute Voronoi tesselation
     vor = Voronoi(pt[['X','Y']])
     regions, vertices = voronoi_polygons_2D(vor)
