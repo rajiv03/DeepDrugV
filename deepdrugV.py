@@ -60,9 +60,9 @@ def voronoi_atoms(bs,bs_out=None,size=None):
     atoms = PandasMol2().read_mol2(bs)
     pt = atoms.df[['subst_name','atom_type', 'atom_name','x','y','z']]
     
-    # convert 3D to 2D based on Perspective projection ( x/(1-z), y/(1-z) )
-    X,Y = pt.x/(1-pt.z), pt.y/(1-pt.z) 
-    pt.loc[:,'X'] = XY[0] ; pt.loc[:,'Y'] = XY[1] 
+    # convert 3D to 2D based on Perspective projection ( x/(1-z), y/(1-z) ) 
+    pt.loc[:,'X'] = pt.x/(1-pt.z)
+    pt.loc[:,'Y'] = pt.y/(1-pt.z) 
     
     # setting output image size, labels off, set 120 dpi w x h
     size = 120 if size is None else size
