@@ -55,12 +55,15 @@ def voronoi_polygons_2D(vor, radius=None):
 
 def voronoi_atoms(bs,bs_out=None,size=None):
     pd.options.mode.chained_assignment = None
+    
     # read molecules in mol2 format 
-    protein = PandasMol2().read_mol2(bs)
-    pt = protein.df[['subst_name','atom_type', 'atom_name','x','y','z']]
+    atoms = PandasMol2().read_mol2(bs)
+    pt = atoms.df[['subst_name','atom_type', 'atom_name','x','y','z']]
+    
     # convert 3D to 2D based on Perspective projection (x/1-z, y/1-z)
     XY = pt.x/1-pt.z,pt.y/1-pt.z 
     pt.loc[:,'X'] = XY[0] ; pt.loc[:,'Y'] = XY[1] 
+    
     # setting output image size, labels off, set 120 dpi w x h
     size = 120 if size is None else size
     figure = plt.figure(figsize=(2.69 , 2.70),dpi=int(size))
@@ -74,7 +77,8 @@ def voronoi_atoms(bs,bs_out=None,size=None):
         polygon = vertices[i]
         polygons.append(polygon)
     pt.loc[:,'polygons'] = polygons
-    # color by protein atom types
+    
+    # color by atom types
     atom_color = {'C.3':'#006600','N.3':'#000066','O.3':'#660000','S.3':'#666600','C.ar':'#009900','N.ar':'#000099','C.2':'#00CC00','N.2':'#0000CC','O.2':'#C00000','C.cat': '#00FF00','N.am':'#3333FF','N.2':'#3333FF','N.pl3':'#6666FF','O.co2':'#FF9999'}         
     for i, row in pt.iterrows():
         tmp1 = pt.loc[i][['atom_type']][0]
@@ -84,6 +88,7 @@ def voronoi_atoms(bs,bs_out=None,size=None):
         ax.add_patch(p1)
     ax.set_xlim(vor.min_bound[0] - 0.1, vor.max_bound[0] + 0.1)
     ax.set_ylim(vor.min_bound[1] - 0.1, vor.max_bound[1] + 0.1)
+    
     # output image saving in any format; default jpg
     bs_out = 'out.jpg' if bs_out is None else bs_out
     plt.savefig(bs_out, frameon=False,bbox_inches="tight", pad_inches=False)
