@@ -61,13 +61,13 @@ def voronoi_atoms(bs,bs_out=None,size=None):
     pt = atoms.df[['subst_name','atom_type', 'atom_name','x','y','z']]
     
     # convert 3D to 2D based on Perspective projection ( x/(1-z), y/(1-z) ) 
-    pt.loc[:,'X'] = pt.x/(1-pt.z)
-    pt.loc[:,'Y'] = pt.y/(1-pt.z) 
+    pt.loc[:,'X'] = pt.x/1-pt.z
+    pt.loc[:,'Y'] = pt.y/1-pt.z
     
     # setting output image size, labels off, set 120 dpi w x h
     size = 120 if size is None else size
     figure = plt.figure(figsize=(2.69 , 2.70),dpi=int(size))
-    ax = plt.subplot(111); ax.axis('off') ;ax.tick_params(axis='both', bottom='false', left='false',right='false',labelleft='false', labeltop='false',labelright='false', labelbottom='false')
+    ax = plt.subplot(111); ax.axis('off') ;ax.tick_params(axis='both', bottom='off', left='off',right='off',labelleft='off', labeltop='off',labelright='off', labelbottom='off')
 
     # compute Voronoi tesselation
     vor = Voronoi(pt[['X','Y']])
